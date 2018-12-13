@@ -1,5 +1,65 @@
-HEADER
+<nav class="navbar is-transparent">
+  <div class="container">
+    <!-- logo -->
+    <div class="navbar-brand">
+      <a routerLink="/" class="navbar-item">MyCompany</a>
+      <!-- hamburger icon -->
+      <span
+        class="navbar-burger"
+        (click)="toggleNav = !toggleNav;"
+        [ngClass]="{  'is-active': toggleNav  }"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <!-- menu -->
+    <div
+      class="navbar-menu"
+      [ngClass]="{  'is-active': toggleNav  }"
+    >
+      <div class="navbar-end">
+        <a routerLink="/" class="navbar-item r-item">Home</a>
+        <a class="navbar-item r-item">About</a>
+        <a class="navbar-item r-item">Features</a>
+        <a routerLink="/faq" class="navbar-item r-item">FAQ</a>
+        <div class="navbar-item">
+          <p class="control">
+            <a class="button is-primary is-outlined">
+              <span class="icon">
+                <i class="fa fa-download"></i>
+              </span>
+              <span>
+                Join Now
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
 <router-outlet></router-outlet>
 
-FOOTER
+<footer class="footer is-primary">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p>
+          And this right here is a spiffy footer, where you can put stuff.
+        </p>
+      </div>
+      <div class="column has-text-right">
+        <a href="#" class="icon">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#" class="icon">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
